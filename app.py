@@ -6,7 +6,7 @@ import streamlit as st
 st.title("Abstractive Summarization of News Articles ✏️")
 text = st.text_input("Input Raw Text:")
 
-state = st.button("Get Summary")
+state = st.button("Get News Summary")
 
 keys=["Short Summary", "Long Summary"]
 
