@@ -1,0 +1,11 @@
+ipython
+omegaconf
+pydub
+PyYAML
+transformers
+torch
+fastapi
+scipy
+python-multipart
+sentencepiece
+streamlit
