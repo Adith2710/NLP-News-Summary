@@ -1,0 +1,23 @@
+name: Push-to-EC2
+
+on: push
+
+jobs:
+  build:
+    name: Push to EC2 Instance
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: executing ssh commands using ssh key
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.REMOTE_HOST}}
+          username: ${{ secrets.REMOTE_USER }}
+          key: ${{ secrets.KEY }}
+          script: |
+            rm -rf NLP-News-Summary
+            git clone git@github.com:Adith2710/NLP-News-Summary.git
+            cd NLP-News-Summary
+            sudo systemctl restart docker
+            sudo docker system prune -a --volumes --force
+            sudo docker image build .
