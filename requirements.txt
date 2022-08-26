@@ -9,3 +9,5 @@ scipy
 python-multipart
 sentencepiece
 streamlit
+requests
+beautifulsoup4
