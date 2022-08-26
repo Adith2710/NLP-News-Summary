@@ -20,4 +20,4 @@ jobs:
             cd NLP-News-Summary
             sudo systemctl restart docker
             sudo docker system prune -a --volumes --force
-            sudo docker image build .
+            sudo docker image build -t summarize .
