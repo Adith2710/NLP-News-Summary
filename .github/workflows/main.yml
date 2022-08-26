@@ -3,22 +3,17 @@ name: Push-to-EC2
 on: push
 
 jobs:
-  deploy:
+  build:
     name: Push to EC2 Instance
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout the code
-        uses: actions/checkout@v1
-
-      - name: Deploy to my EC2 instance
-        uses: easingthemes/ssh-deploy@v2.1.5
-        env:
-          SSH_PRIVATE_KEY: ${{ secrets.KEY }}
-          SOURCE: "./"
-          REMOTE_HOST: ${{ secrets.REMOTE_HOST }}
-          REMOTE_USER: ${{ secrets.REMOTE_USER }}
-          TARGET: "/home/ec2-user/SampleExpressApp"
+      - name: executing ssh commands using ssh key
+        uses: appleboy/ssh-action@master
+        with:
+          host: ${{ secrets.REMOTE_HOST}}
+          username: ${{ secrets.REMOTE_USER }}
+          key: ${{ secrets.KEY }}
           script: |
             rm -rf NLP-News-Summary
             git clone git@github.com:Adith2710/NLP-News-Summary.git
