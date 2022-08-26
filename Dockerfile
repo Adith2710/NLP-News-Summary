@@ -17,7 +17,7 @@ COPY . /app
 
 WORKDIR /app
 
-EXPOSE 8501
+EXPOSE 22
 
 #CMD streamlit run summarize.py
-CMD streamlit run app.py --server.port 80
+CMD streamlit run app.py --server.port=22
