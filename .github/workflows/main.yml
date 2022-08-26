@@ -18,7 +18,7 @@ jobs:
           SOURCE: "./"
           REMOTE_HOST: ${{ secrets.REMOTE_HOST }}
           REMOTE_USER: ${{ secrets.REMOTE_USER }}
-          TARGET: ""
+          TARGET: "/home/ec2-user/SampleExpressApp"
           script: |
             rm -rf NLP-News-Summary
             git clone git@github.com:Adith2710/NLP-News-Summary.git
