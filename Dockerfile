@@ -20,4 +20,4 @@ WORKDIR /app
 EXPOSE 8501
 
 #CMD streamlit run summarize.py
-CMD streamlit run app.py
+CMD streamlit run app.py --server.port 80
