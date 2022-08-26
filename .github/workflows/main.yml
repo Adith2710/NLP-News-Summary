@@ -1,31 +1,26 @@
-name: CI
+name: Push-to-EC2
 
-# Controls when the workflow will run
-on:
-  # Triggers the workflow on push or pull request events but only for the main branch
-  push:
-    branches: [main]
-  # Allows you to run this workflow manually from the Actions tab
-  workflow_dispatch:
+on: push
 
-# A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
-  # This workflow contains a single job called "build"
-  build:
-    name: Build
-    # The type of runner that the job will run on
-    runs-on: ubuntu-22.04
+  deploy:
+    name: Push to EC2 Instance
+    runs-on: ubuntu-latest
 
-    # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-      - name: executing ssh commands using ssh key
-        uses: actions/checkout@v2
-        with:
-          host: ${{ secrets.HOST}}
-          username: ${{ secrets.USERNAME }}
-          key: ${{ secrets.KEY }}
+      - name: Checkout the code
+        uses: actions/checkout@v1
+
+      - name: Deploy to my EC2 instance
+        uses: easingthemes/ssh-deploy@v2.1.5
+        env:
+          SSH_PRIVATE_KEY: ${{ secrets.EC2_SSH_KEY }}
+          SOURCE: "./"
+          REMOTE_HOST: ${{ secrets.EC2_SSH_KEY }}
+          REMOTE_USER: ${{ secrets.EC2_SSH_KEY }}
+          TARGET: ""
           script: |
-            rm -rf Audiolytics
+            rm -rf NLP-News-Summary
             git clone git@github.com:Adith2710/NLP-News-Summary.git
             cd NLP-News-Summary
             sudo docker image build .
