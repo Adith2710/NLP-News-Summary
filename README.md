@@ -2,7 +2,7 @@
 
 # AI based News Summarization
 
-*built using python 3.9, docker, AWS EC2 and Github Pages*
+*built using python 3.9, docker, AWS EC2 and Github Actions*
 
 To view app, click [HERE](http://3.90.16.8:8501/)
 
@@ -43,7 +43,7 @@ One of the easiest ways is to build a **heroku app** and connect the docker imag
 
 ## Continuous Deployment Pipeline
 
-This app was completely deployed using the automation tool *Github Pages*. The Automation script can be found in ```.github/workflows/CI.yml```. Most of the intial sections of the script are self-explanatory and can be found in many tutorials online. An explanation of the script is as follows
+This app was completely deployed using the automation tool *Github Actions*. The Automation script can be found in ```.github/workflows/CI.yml```. Most of the intial sections of the script are self-explanatory and can be found in many tutorials online. An explanation of the script is as follows
 ```
           script: |
             rm -rf NLP-News-Summary
