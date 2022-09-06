@@ -23,7 +23,7 @@ Both models use summarization based models which were trained using different da
 * Go to the repository folder ``` cd .../NLP-News-Summary```
 * Build docker image (For Ubuntu- ```sudo docker image build .```)
 * Once the image is built, get the image id ```sudo docker image ls```
-* Run the docker container with the appropriate ports open ```sudo docker container run -p 8501:8501 -i <image-id>``` 
+* Run the docker container with the appropriate ports open ```sudo docker container run -p 8501:8501 -i <image-id> &``` 
 * Once the container is run, open the link [http://localhost:8501/](http://localhost:8501/) to view the app
 
 ### Deploy App on the Internet
@@ -38,8 +38,10 @@ One of the easiest ways is to build a **heroku app** and connect the docker imag
 * Go to the repository folder ``` cd .../NLP-News-Summary```
 * Build docker image ```sudo docker image build .```
 * Once the image is built, get the image id ```sudo docker image ls```
-* Run the docker container with the appropriate ports open ```sudo docker container run -p 8501:8501 -i <image-id>``` 
+* Run the docker container with the appropriate ports open ```sudo docker container run -p 8501:8501 -i <image-id> &``` 
 * Once the docker container is built, you can view your app on the url mentioned in the **External Network** URL.
+
+**Note:** The app will run as long as the terminal window is kept open. In order to detach the session in order to run it independently, follow the steps provided in this [link](https://towardsdatascience.com/how-to-deploy-a-streamlit-app-using-an-amazon-free-ec2-instance-416a41f69dc3#:~:text=a%20very%20small%20problem%20though)
 
 ## Continuous Deployment Pipeline
 
