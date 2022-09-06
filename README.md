@@ -1,6 +1,7 @@
 ![summarize-streamlit](https://user-images.githubusercontent.com/63020303/188521301-83a0f2bc-6740-4017-9b9f-13b3e892f184.png)
 
 # AI based News Summarization
+![GitHub Actions](https://img.shields.io/badge/github%20actions-%232671E5.svg?style=for-the-badge&logo=githubactions&logoColor=white) ![Docker](https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white) [![Open in Streamlit](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://share.streamlit.io/jkanner/streamlit-audio/main/app.py)
 
 *built using python 3.9, docker, AWS EC2 and Github Actions*
 
@@ -67,4 +68,4 @@ This app was completely deployed using the automation tool *Github Actions*. The
 
 ## Liscence
 
-[MIT](https://choosealicense.com/licenses/mit/)
+[![Licence](https://img.shields.io/github/license/Ileriayo/markdown-badges?style=for-the-badge)](./LICENSE)
