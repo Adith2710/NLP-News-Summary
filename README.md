@@ -66,6 +66,6 @@ This app was completely deployed using the automation tool *Github Actions*. The
 
 **Note:** Running this script will not automatically change the output app to the newer version. We must go to the AWS EC2 instance command line and run the docker image to do so. This is done in order to prevent excess memory build up and also as stage of security before running the app. But all the errors (if any) till now, has been identified when running the CI.yml and not after.
 
-## Liscence
+## License
 
-[![Licence](https://img.shields.io/github/license/Ileriayo/markdown-badges?style=for-the-badge)](./LICENSE)
+[![License](https://img.shields.io/github/license/Ileriayo/markdown-badges?style=for-the-badge)](./LICENSE)
