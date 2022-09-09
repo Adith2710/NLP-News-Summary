@@ -4,8 +4,7 @@ on:
   push:
     branches:
       - master
-    paths-ignore:
-      - '**/README.md'
+
 jobs:
   build:
     name: Push to EC2 Instance
