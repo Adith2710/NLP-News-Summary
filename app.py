@@ -55,8 +55,7 @@ elif choose_type== "URL":
     choose_key = st.radio("Choose Sumarization Type" ,keys)
 
     tokenization_kwargs = {'truncation':True,'max_length':512,'return_tensors':'pt'}
-    if text.isalpha()== True:
-        if state:
+    if state:
             url = text
             html = urlopen(url).read()
             soup = BeautifulSoup(html, features="html.parser")
